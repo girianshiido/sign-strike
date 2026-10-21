@@ -1,0 +1,27 @@
+{
+  "name": "sign-strike",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "build": "tsc --noEmit && vite build && node scripts/build-sw.mjs",
+    "preview": "vite preview --host 127.0.0.1",
+    "qa": "node scripts/browser-qa.mjs",
+    "qa:pwa": "node scripts/pwa-qa.mjs",
+    "verify:public": "node scripts/verify-public.mjs"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3",
+    "vite": "7.3.7",
+    "vitest": "3.2.4",
+    "playwright": "1.56.1",
+    "@types/node": "22.20.5"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "packageManager": "pnpm@11.25.0"
+}
